@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
 import { RegisterComponent } from './registro/register.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: 'registro', component: RegisterComponent },
-  { path: '', redirectTo: '/registro', pathMatch: 'full' }, // Redirigir a registro por defecto
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Ahora la página de inicio será /login
 ];

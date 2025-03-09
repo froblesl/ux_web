@@ -1,0 +1,56 @@
+.login-container {
+    width: 535px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10%;
+}
+
+mat-form-field {
+    background-color: var(--md-sys-color-surface-container-highest, #E6E0E9) !important;
+    width: 535px;
+    height: 56px;
+    margin-bottom: 26px;
+}
+
+button.mat-mdc-raised-button {
+    height: 50px;
+    background-color: var(--md-sys-color-primary, #6750A4) !important;
+    color: var(--md-sys-color-on-primary, #FFFFFF) !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.boton_login{
+    width: 405px;
+    margin-top: 7%;
+}
+
+.boton_registrar{
+    width: 384px;
+    margin-top: 20px;
+}
+
+.dialog-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dialog-container h2 {
+    color: #000000;
+    font-size: 20px;
+}
+
+.dialog-container p {
+    font-size: 16px;
+}
+
+.dialog-container button {
+    width: 50%;
+}

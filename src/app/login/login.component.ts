@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; // Importar Router
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -7,10 +7,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-login',
   standalone: true,
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
   imports: [
     FormsModule,
     MatFormFieldModule,
@@ -19,42 +19,43 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     MatDialogModule
   ],
 })
-export class RegisterComponent {
+export class LoginComponent {
   user = {
-    name: '',
-    email: '',
     username: '',
     password: '',
   };
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private router: Router, private dialog: MatDialog) {}
 
   onSubmit() {
-    if (this.user.name && this.user.email && this.user.username && this.user.password) {
-      this.dialog.open(RegisterDialog);
+    if (this.user.username && this.user.password) {
+      this.dialog.open(LoginDialog);
     }
+  }
+
+  goToRegister() {
+    this.router.navigate(['/registro']); // Redirige a la pantalla de registro
   }
 }
 
-// Componente para el Dialog
+// Componente para el Dialog de éxito
 @Component({
-  selector: 'app-register-dialog',
+  selector: 'app-login-dialog',
   standalone: true,
   template: `
     <div class="dialog-container">
-      <h2>Registro Exitoso</h2>
-      <p>Tu cuenta ha sido creada correctamente.</p>
+      <h2>Inicio de Sesión Exitoso</h2>
+      <p>Has iniciado sesión correctamente.</p>
       <button mat-raised-button color="primary" (click)="close()">OK</button>
     </div>
   `,
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./login.component.css'],
   imports: [MatButtonModule, MatDialogModule],
 })
-export class RegisterDialog {
-  constructor(private dialog: MatDialog, private router: Router) {} // Agregar Router
+export class LoginDialog {
+  constructor(private dialog: MatDialog) {}
 
   close() {
     this.dialog.closeAll();
-    this.router.navigate(['/login']); // Redirigir a la pantalla de login
   }
 }
