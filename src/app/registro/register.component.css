@@ -1,0 +1,57 @@
+.register-container {
+    width: 535px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10%;
+  }
+  
+  mat-form-field {
+    background-color: var(--md-sys-color-surface-container-highest, #E6E0E9) !important;
+    width: 535px;
+    height: 56px; /* Hace que ocupe todo el ancho disponible */
+    margin-bottom: 26px; /* Espacio entre campos */
+  } 
+  
+  
+  button.mat-mdc-raised-button {
+    width: 384px;
+    height: 50px;
+    background-color: var(--md-sys-color-primary, #6750A4) !important; /* Color primario */
+    color: var(--md-sys-color-on-primary, #FFFFFF) !important; /* Color del texto */
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase; /* Opcional: convertir texto a mayúsculas */
+    margin-top: 10%;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .dialog-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dialog-container h2 {
+    color: #000000;
+    font-size: 20px;
+  }
+  
+  .dialog-container p {
+    font-size: 16px;
+  }
+  
+  .dialog-container button {
+    width: 50%;
+  }
+  
+  
