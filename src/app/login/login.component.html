@@ -1,0 +1,26 @@
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+  
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input matInput type="text" [(ngModel)]="user.username" name="username" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" [(ngModel)]="user.password" name="password" required />
+      </mat-form-field>
+  
+      <!-- Botón de Iniciar Sesión -->
+      <button mat-raised-button class=boton_login color="primary" type="submit" [disabled]="loginForm.invalid">
+        Iniciar Sesión
+      </button>
+  
+      <!-- Botón de Registrarse -->
+      <button mat-raised-button class=boton_registrar color="primary" type="button" (click)="goToRegister()">
+        Registrarse
+      </button>
+    </form>
+  </div>
+  
