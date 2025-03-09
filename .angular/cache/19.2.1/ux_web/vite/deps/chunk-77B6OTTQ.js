@@ -30157,6 +30157,7 @@ export {
   last2 as last,
   pairwise,
   scan,
+  share,
   shareReplay,
   skip,
   startWith,
@@ -30735,4 +30736,4 @@ export {
    * found in the LICENSE file at https://angular.dev/license
    *)
 */
-//# sourceMappingURL=chunk-KQWRIB4T.js.map
+//# sourceMappingURL=chunk-77B6OTTQ.js.map
