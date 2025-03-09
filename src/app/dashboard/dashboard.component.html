@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <!-- Ícono de usuario a la izquierda -->
+  <button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <span class="spacer"></span> <!-- Empuja los otros iconos a la derecha -->
+
+  <!-- Ícono de notificaciones -->
+  <button mat-icon-button>
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+  <!-- Ícono de ajustes -->
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+</mat-toolbar>
+
+<h1>Dashboard</h1>
+<h3>Historial de Medicación</h3>
+
+<!-- Cuadro morado grande con click para navegar -->
+<mat-card class="medication-card" (click)="goToMedicationHistory()"> </mat-card>

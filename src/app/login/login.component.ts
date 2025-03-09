@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; // Importar Router
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -53,9 +53,10 @@ export class LoginComponent {
   imports: [MatButtonModule, MatDialogModule],
 })
 export class LoginDialog {
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private router: Router) {} // Agregar Router
 
   close() {
     this.dialog.closeAll();
+    this.router.navigate(['/dashboard']); // Redirige a Dashboard después de cerrar el diálogo
   }
 }

@@ -7,7 +7,11 @@ import {
   MatCommonModule,
   _IdGenerator,
   hasModifierKey
-} from "./chunk-5ZVU6IFK.js";
+} from "./chunk-YA5I72X6.js";
+import {
+  BidiModule,
+  Directionality
+} from "./chunk-YPE6WJWE.js";
 import {
   Platform,
   RtlScrollAxisType,
@@ -22,15 +26,11 @@ import {
   coerceNumberProperty,
   getRtlScrollAxisType,
   supportsScrollBehavior
-} from "./chunk-JXG2EO44.js";
-import {
-  BidiModule,
-  Directionality
-} from "./chunk-LAIQI3S4.js";
+} from "./chunk-SMLUSPVE.js";
 import {
   DOCUMENT,
   Location
-} from "./chunk-3NOEDH5E.js";
+} from "./chunk-ZUXQ7BAO.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -113,7 +113,7 @@ import {
   ɵɵstyleProp,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-KQWRIB4T.js";
+} from "./chunk-77B6OTTQ.js";
 
 // node_modules/@angular/cdk/fesm2022/collections.mjs
 var DataSource = class {

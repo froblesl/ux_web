@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-3NOEDH5E.js";
+} from "./chunk-ZUXQ7BAO.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -94,7 +94,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-KQWRIB4T.js";
+} from "./chunk-77B6OTTQ.js";
 
 // node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {
@@ -4399,6 +4399,7 @@ function provideClientHydration(...features) {
 var VERSION = new Version("19.2.1");
 
 export {
+  HttpClient,
   BrowserDomAdapter,
   BrowserGetTestability,
   EVENT_MANAGER_PLUGINS,
@@ -4453,4 +4454,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-ONDROWK4.js.map
+//# sourceMappingURL=chunk-3NRKWRHB.js.map
