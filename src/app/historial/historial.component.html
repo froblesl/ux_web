@@ -21,14 +21,31 @@
   </button>
 </mat-toolbar>
 
-<h1>Historial de Medicacion</h1>
-<div style="margin-left: 5%;">
-  <mat-form-field class = "search-bar" appearance="outline">
+<h1>Historial de Medicación</h1>
+<div style="margin-left: 5%; display: flex; align-items: center;">
+  <mat-form-field class="search-bar" appearance="outline">
     <mat-label style="margin-left: 15%;">Buscar medicamento</mat-label>
     <input matInput placeholder="Buscar medicamento">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
+
+  <!-- Ícono que abre el calendario -->
+  <mat-icon 
+    matSuffix 
+    style="margin-left: 1%; cursor: pointer;" 
+    (click)="openCalendar()"
+    (keydown)="openCalendar()">
+    calendar_today
+  </mat-icon>
+
+  <!-- Campo oculto para el mat-datepicker -->
+  <input matInput [matDatepicker]="picker" #dateInput hidden>
+
+  <!-- Datepicker -->
+  <mat-datepicker #picker></mat-datepicker>
 </div>
+
+
 
 <div class="medication-list">
   <mat-card class="medication-item">
@@ -36,7 +53,7 @@
       <p>Dolex - 1 tableta</p>
       <p>07:00 am</p>
       <div class="medication-details">
-        <span>Pastilla dolex dolor de cabeza</span>
+        <span class="medication-description">Pastilla dolex dolor de cabeza</span>
         <span class="medication-date">02/03/2025</span>
       </div>
     </div>

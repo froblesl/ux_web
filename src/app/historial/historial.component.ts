@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialog, MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,12 +24,16 @@ import { Router } from '@angular/router';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.css']
 })
 export class HistorialComponent {
+  @ViewChild('picker') picker!: any;
+
   historial = [
     {
       nombre: 'Dolex - 1 tableta',
@@ -48,6 +54,10 @@ export class HistorialComponent {
       width: '400px',
       data: { tipo }
     });
+  }
+
+  openCalendar() {
+    this.picker.open();
   }
 }
 
