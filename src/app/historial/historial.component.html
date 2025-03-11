@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+  <!-- Ícono de usuario a la izquierda -->
+  <button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+  <!-- Empuja los otros iconos a la derecha -->
+
+  <button mat-icon-button (click)="goBack()"> 
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <!-- Ícono de notificaciones -->
+  <button mat-icon-button>
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+  <!-- Ícono de ajustes -->
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+</mat-toolbar>
+
+<h1>Historial de Medicacion</h1>
+<div style="margin-left: 5%;">
+  <mat-form-field class = "search-bar" appearance="outline">
+    <mat-label style="margin-left: 15%;">Buscar medicamento</mat-label>
+    <input matInput placeholder="Buscar medicamento">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+
+<div class="medication-list">
+  <mat-card class="medication-item">
+    <div class="medication-info">
+      <p>Dolex - 1 tableta</p>
+      <p>07:00 am</p>
+      <div class="medication-details">
+        <span>Pastilla dolex dolor de cabeza</span>
+        <span class="medication-date">02/03/2025</span>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<!-- Contenedor para los botones -->
+<div class="button-container">
+  <button mat-button class="export-button" (click)="openDialog('Exportar')">
+    Exportar Datos
+  </button>
+  <button mat-button class="import-button" (click)="openDialog('Importar')">
+    Importar Datos
+  </button>
+</div>
+
