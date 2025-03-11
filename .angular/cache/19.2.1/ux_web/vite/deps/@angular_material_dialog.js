@@ -7,11 +7,7 @@ import {
   MatCommonModule,
   _IdGenerator,
   hasModifierKey
-} from "./chunk-YA5I72X6.js";
-import {
-  BidiModule,
-  Directionality
-} from "./chunk-YPE6WJWE.js";
+} from "./chunk-HG6DNT5Y.js";
 import {
   Platform,
   RtlScrollAxisType,
@@ -27,6 +23,10 @@ import {
   getRtlScrollAxisType,
   supportsScrollBehavior
 } from "./chunk-SMLUSPVE.js";
+import {
+  BidiModule,
+  Directionality
+} from "./chunk-YPE6WJWE.js";
 import {
   DOCUMENT,
   Location

@@ -23,6 +23,6 @@ export class DashboardComponent {
   constructor(private router: Router) {}
 
   goToMedicationHistory() {
-    this.router.navigate(['/historial-medicacion']); // Redirige a la nueva pantalla
+    this.router.navigate(['/historial']); // Redirige a la nueva pantalla
   }
 }
