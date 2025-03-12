@@ -1,8 +1,19 @@
 <mat-toolbar color="primary">
-  <!-- Ícono de usuario a la izquierda -->
-  <button mat-icon-button>
+  <!-- Ícono de usuario con menú desplegable -->
+  <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>account_circle</mat-icon>
   </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="editarPerfil()">
+      <mat-icon>edit</mat-icon>
+      Editar perfil
+    </button>
+    <button mat-menu-item (click)="cerrarSesion()">
+      <mat-icon>logout</mat-icon>
+      Cerrar sesión
+    </button>
+  </mat-menu>
 
   <span class="spacer"></span>
   <!-- Empuja los otros iconos a la derecha -->
@@ -23,7 +34,7 @@
 
 <h1>Historial de Medicacion</h1>
 <div style="margin-left: 5%;">
-  <mat-form-field class = "search-bar" appearance="outline">
+  <mat-form-field class="search-bar" appearance="outline">
     <mat-label style="margin-left: 15%;">Buscar medicamento</mat-label>
     <input matInput placeholder="Buscar medicamento">
     <mat-icon matSuffix>search</mat-icon>
@@ -52,4 +63,3 @@
     Importar Datos
   </button>
 </div>
-

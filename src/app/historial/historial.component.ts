@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialog, MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu'; // ✅ Importar MatMenuModule
 
 @Component({
   selector: 'app-historial',
@@ -22,7 +23,8 @@ import { Router } from '@angular/router';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule // ✅ Agregar MatMenuModule a los imports
   ],
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.css']
@@ -37,17 +39,27 @@ export class HistorialComponent {
     }
   ];
 
+  constructor(private router: Router, public dialog: MatDialog) {}
+
   goBack() {
     this.router.navigate(['/dashboard']);
   }
-
-  constructor(private router: Router, public dialog: MatDialog) {}
 
   openDialog(tipo: string) {
     this.dialog.open(DialogContent, {
       width: '400px',
       data: { tipo }
     });
+  }
+
+  editarPerfil() {
+    this.router.navigate(['/informacion']); // ✅ Redirigir a la pantalla de edición de perfil
+  }
+
+  cerrarSesion() {
+    console.log('Cerrando sesión...');
+    // Aquí puedes limpiar el localStorage, cookies o llamar un servicio de logout
+    this.router.navigate(['/login']); // ✅ Redirigir a la pantalla de login
   }
 }
 
