@@ -134,6 +134,17 @@ mat-toolbar {
     min-width: 270px; /* Ancho mínimo para los botones */
     min-height: 50px; /* Alto mínimo */
   }
+
+  .medication-details span {
+    font-weight: 100; /* Hace que el texto se vea más delgado */
+    font-family: 'Roboto', sans-serif; /* Cambia la fuente si es necesario */
+    font-size: 14px;
+  }
+  
+  .medication-description {
+    font-weight: 200;
+  }
+  
   
   
   

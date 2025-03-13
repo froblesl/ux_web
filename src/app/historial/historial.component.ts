@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialog, MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu'; // ✅ Importar MatMenuModule
 
@@ -24,12 +26,15 @@ import { MatMenuModule } from '@angular/material/menu'; // ✅ Importar MatMenuM
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatMenuModule // ✅ Agregar MatMenuModule a los imports
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.css']
 })
 export class HistorialComponent {
+  @ViewChild('picker') picker!: any;
+
   historial = [
     {
       nombre: 'Dolex - 1 tableta',
@@ -52,14 +57,8 @@ export class HistorialComponent {
     });
   }
 
-  editarPerfil() {
-    this.router.navigate(['/informacion']); // ✅ Redirigir a la pantalla de edición de perfil
-  }
-
-  cerrarSesion() {
-    console.log('Cerrando sesión...');
-    // Aquí puedes limpiar el localStorage, cookies o llamar un servicio de logout
-    this.router.navigate(['/login']); // ✅ Redirigir a la pantalla de login
+  openCalendar() {
+    this.picker.open();
   }
 }
 
