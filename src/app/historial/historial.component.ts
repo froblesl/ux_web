@@ -11,6 +11,7 @@ import { MatDialog, MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angu
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { Router } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu'; // ✅ Importar MatMenuModule
 
 @Component({
   selector: 'app-historial',
@@ -43,11 +44,11 @@ export class HistorialComponent {
     }
   ];
 
+  constructor(private router: Router, public dialog: MatDialog) {}
+
   goBack() {
     this.router.navigate(['/dashboard']);
   }
-
-  constructor(private router: Router, public dialog: MatDialog) {}
 
   openDialog(tipo: string) {
     this.dialog.open(DialogContent, {
