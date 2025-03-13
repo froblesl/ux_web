@@ -7,7 +7,7 @@ import {
   ESCAPE,
   _IdGenerator,
   hasModifierKey
-} from "./chunk-WFIPE4LL.js";
+} from "./chunk-DWQE7BJA.js";
 import {
   _CdkPrivateStyleLoader
 } from "./chunk-TFECLKXS.js";
@@ -3434,6 +3434,7 @@ export {
   ComponentPortal,
   TemplatePortal,
   BasePortalOutlet,
+  DomPortalOutlet,
   CdkPortalOutlet,
   PortalModule,
   OverlayConfig,
@@ -3443,4 +3444,4 @@ export {
   Overlay,
   OverlayModule
 };
-//# sourceMappingURL=chunk-W3XKUD7Z.js.map
+//# sourceMappingURL=chunk-G3DNHCAG.js.map

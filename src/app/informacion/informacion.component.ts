@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialog, MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-informacion',
   standalone: true,
@@ -34,6 +35,7 @@ export class InformacionComponent {
     this.dialog.open(GuardarCambiosDialog, {
       width: '400px'
     });
+    this.router.navigate(['/dashboard']);
   }
 }
 

@@ -27,7 +27,8 @@ import { MatMenuModule } from '@angular/material/menu'; // ✅ Importar MatMenuM
     MatInputModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatMenuModule // ✅ Agregar aquí MatMenuModule
   ],
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.css']
@@ -59,6 +60,14 @@ export class HistorialComponent {
 
   openCalendar() {
     this.picker.open();
+  }
+
+  editarPerfil() {
+    this.router.navigate(['/informacion']); // ✅ Redirige a "/informacion"
+  }
+
+  cerrarSesion() {
+    console.log("Cerrar sesión");
   }
 }
 
