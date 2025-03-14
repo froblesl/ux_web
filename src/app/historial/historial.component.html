@@ -1,0 +1,82 @@
+<mat-toolbar color="primary">
+  <!-- Ícono de usuario con menú desplegable -->
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="editarPerfil()">
+      <mat-icon>edit</mat-icon>
+      Editar perfil
+    </button>
+    <button mat-menu-item (click)="cerrarSesion()">
+      <mat-icon>logout</mat-icon>
+      Cerrar sesión
+    </button>
+  </mat-menu>
+
+  <span class="spacer"></span>
+  <!-- Empuja los otros iconos a la derecha -->
+
+  <button mat-icon-button (click)="goBack()"> 
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <!-- Ícono de notificaciones -->
+  <button mat-icon-button>
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+  <!-- Ícono de ajustes -->
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+</mat-toolbar>
+
+<h1>Historial de Medicación</h1>
+<div style="margin-left: 5%; display: flex; align-items: center;">
+  <mat-form-field class="search-bar" appearance="outline">
+    <mat-label style="margin-left: 15%;">Buscar medicamento</mat-label>
+    <input matInput placeholder="Buscar medicamento">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <!-- Ícono que abre el calendario -->
+  <mat-icon 
+    matSuffix 
+    style="margin-left: 1%; margin-top: 1%; cursor: pointer;" 
+    (click)="openCalendar()"
+    (keydown)="openCalendar()">
+    calendar_today
+  </mat-icon>
+
+  <!-- Campo oculto para el mat-datepicker -->
+  <input matInput [matDatepicker]="picker" #dateInput hidden>
+
+  <!-- Datepicker -->
+  <mat-datepicker #picker></mat-datepicker>
+</div>
+
+
+
+<div class="medication-list">
+  <mat-card class="medication-item">
+    <div class="medication-info">
+      <p>Dolex - 1 tableta</p>
+      <p>07:00 am</p>
+      <div class="medication-details">
+        <span class="medication-description">Pastilla dolex dolor de cabeza</span>
+        <span class="medication-date" style="margin-top: -1.5%;">02/03/2025</span>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<!-- Contenedor para los botones -->
+<div class="button-container">
+  <button mat-button class="export-button" (click)="openDialog('Exportar')">
+    Exportar Datos
+  </button>
+  <button mat-button class="import-button" (click)="openDialog('Importar')">
+    Importar Datos
+  </button>
+</div>
